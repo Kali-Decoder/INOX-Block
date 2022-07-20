@@ -1,11 +1,18 @@
-html,
+
+:root{
+  --primary:#151414;
+  --secondary: #ff5e14;
+  --tertiary : #878787;
+
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: var(--primary) !important;
 }
-
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +20,60 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.links{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  width: 30%;
+  /* color: var(--secondary); */
+  /* border: 1px solid red; */
+}
+.home-content{
+  border: 1px solid white;
+  border-style: dotted;
+  border-radius: 30px ;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.home-content > .img{
+    /* border: 2px solid var(--secondary); */
+    margin-top: 20px;
+    width: 30%;
+    height: auto;
+}
+
+.home-content > .content{
+  width: 65%;
+  /* border: 1px solid white; */
+  padding: 10px;
+  font-size: small !important;
+}
+
+.seating{
+  display: flex;
+  justify-content: center;
+  /* align-items:/center; */
+  height: 100vh;
+}
+.seating > .seats{
+  display: flex;
+  flex:content;
+  flex-wrap: wrap;
+  
+}
+
+.info{
+  /* border: 1px solid red; */
+  width: 60%;
+}
+.movie-head{
+  font-size: 25px;
+  margin-bottom: 10px;
+
+}
+.desc{
+  margin-top: 10px;
+  font-size: smaller;
+  color: white;
 }
