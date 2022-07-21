@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Title from "../Components/Title";
 import { Divider, Text } from "@chakra-ui/react";
 import HomeCard from "../utils/HomeCard";
+
 const HomePage = () => {
+ 
   return (
     <>
       <Title

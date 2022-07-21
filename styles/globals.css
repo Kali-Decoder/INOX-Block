@@ -26,7 +26,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items:center;
-  width: 30%;
+  width: 35%;
   /* color: var(--secondary); */
   /* border: 1px solid red; */
 }

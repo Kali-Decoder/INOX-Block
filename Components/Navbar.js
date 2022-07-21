@@ -1,8 +1,12 @@
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./footer.module.css";
-import { Button,Divider } from "@chakra-ui/react";
+import { MovieContextProvider } from "../utils/Context";
+import { Button, Divider } from "@chakra-ui/react";
 const Navbar = () => {
+  const { isConnectWallet, currentAccount, connection, isAdmin, admin } =
+    useContext(MovieContextProvider);
+
   return (
     <>
       <div
@@ -15,7 +19,7 @@ const Navbar = () => {
               <div className={`${styles["copyright-text"]} `}>
                 <p>
                   <Link href="https://codepen.io/anupkumar92/" className="mx-2">
-                    Cinema Owner
+                    {admin ?   "Owner Address :" + "  " + admin: "Loading..."}
                   </Link>
                 </p>
               </div>
@@ -51,11 +55,24 @@ const Navbar = () => {
             </div>
 
             <div className="links">
-              <Button style={{ backgroundColor: "#ff5e14" }}>Admin</Button>
-              <Button style={{ backgroundColor: "#ff5e14" }}>Connection</Button>
-              <Button colorScheme="whatsapp">
-                <Link href="/movies">View Movies</Link>
+              {isAdmin? <Button style={{ backgroundColor: "#ff5e14" }} disabled>Admin</Button>:<Button style={{ backgroundColor: "#ff5e14" }} disabled>User</Button>}
+              <Button
+                isLoading={!isConnectWallet}
+                spinnerPlacement="start"
+                style={{ backgroundColor: "#ff5e14" }}
+                onClick={connection}
+              >
+                {isConnectWallet
+                  ? currentAccount.substr(0, 5) +
+                    "..." +
+                    currentAccount.substr(37, 41)
+                  : "Connect Wallet"}
               </Button>
+              {isConnectWallet ? (
+                <Button colorScheme="whatsapp">
+                  <Link href="/movies">View Movies</Link>
+                </Button>
+              ) : null}
             </div>
           </div>
         </div>
