@@ -14,7 +14,7 @@ const BookTicket = () => {
         <div className="row mt-3">
           {data.length != 0
             ? data.map((item, i) => (
-                <div className="col-md-3 col-12 col-lg-3 mx-auto">
+                <div className="col-md-3 col-12 col-lg-3 mx-auto" key={i}>
                   {" "}
                   <MovieCard item={item} key={i} />
                 </div>
