@@ -33,3 +33,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 "# ssoc" 
+![Screenshot (87)](https://user-images.githubusercontent.com/82640789/180033076-41dfbd8c-775a-48d3-867b-95828883f254.png)
+![Screenshot (88)](https://user-images.githubusercontent.com/82640789/180033091-838a51c5-0d8c-428f-bda5-c1c1f9db784a.png)
+![Screenshot (89)](https://user-images.githubusercontent.com/82640789/180033102-af0fce01-76a7-4431-888b-9c815df756a9.png)
