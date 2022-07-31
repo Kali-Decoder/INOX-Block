@@ -59,6 +59,8 @@ module.exports = {
       network_id: 4,
       gas: 4500000,
       gasPrice: 10000000000,
+      networkCheckTimeout: 10000,
+      pollingInterval:30000,
     },
 
     // Another network with more advanced options...
